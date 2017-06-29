@@ -22,11 +22,11 @@ key = {"A" : ".-", "B" : "-...", "C" : "-.-.",
 
 #function for traffic light
 def traffic(c):
-    red.blink(10,18,c)
-    sleep(10)
+    green.blink(15,13,c)
+    sleep(15)
     amber.blink(3,25,c)
     sleep(3)
-    green.blink(15,13,c)
+    red.blink(10,18,c)
 
 #disco function
 def disco():
