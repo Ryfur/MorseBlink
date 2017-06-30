@@ -20,6 +20,12 @@ key = {"A" : ".-", "B" : "-...", "C" : "-.-.",
        "4" : "....-", "5" : ".....", "6" : "-....",
        "7" : "--...", "8" : "---..", "9" : "----.", " " : " "}
 
+#reset function
+def reset():
+    red.off()
+    amber.off()
+    green.off()
+
 #function for traffic light
 def traffic(c):
     green.blink(15,13,c)
@@ -61,15 +67,19 @@ OR type Disco for a party
 OR type Quit to exit:  """)
     
     if english.upper() == "QUIT":
+        reset()
         break
     elif english.upper() == "TRAFFIC":
+        reset()
         cycles = int(input("Enter # of cycles you want to see: "))
         traffic(cycles)
     elif english.upper() == "DISCO":
+        reset()
         disco()
         print("\n\nTHIS PARTY NEVER STOPS!!!\n")
     else:
         #Speed Input
+        reset()
         while True:
             s = input("""\n\nEnter speed of Morse
 (Fast, Medium, or Slow?):  """)
